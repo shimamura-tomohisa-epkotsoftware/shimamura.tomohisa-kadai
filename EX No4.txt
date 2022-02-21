@@ -1,0 +1,371 @@
+ErrorException {#236 ▼
+  #message: "Trying to get property 'version' of non-object"
+  #code: 0
+  #file: "C:\xampp\htdocs\laravel-project\app\Http\Controllers\API\VerController.php"
+  #line: 19
+  #severity: E_NOTICE
+  trace: {▼
+    C:\xampp\htdocs\laravel-project\app\Http\Controllers\API\VerController.php:19 {▼
+      app\Http\Controllers\API\VerController->index() …
+      › 'result'      => true,
+      › 'version'     => $version->version,
+      › 'min_version' => $version->min_version
+      arguments: {▼
+        $level: 8
+        $message: "Trying to get property 'version' of non-object"
+        $file: "C:\xampp\htdocs\laravel-project\app\Http\Controllers\API\VerController.php"
+        $line: 19
+        $context: array:1 [ …1]
+      }
+    }
+    app\Http\Controllers\API\VerController->index() {}
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Controller.php:54 {▶}
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php:45 {▼
+      Illuminate\Routing\ControllerDispatcher->dispatch(Route $route, $controller, $method) …
+      › if (method_exists($controller, 'callAction')) {
+      ›     return $controller->callAction($method, $parameters);
+      › }
+      arguments: {▼
+        $method: "index"
+        $parameters: []
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Route.php:219 {▼
+      Illuminate\Routing\Route->runController() …
+      › return $this->controllerDispatcher()->dispatch(
+      ›     $this, $this->getController(), $this->getControllerMethod()
+      › );
+      arguments: {▼
+        $route: Illuminate\Routing\Route {#163 …}
+        $controller: app\Http\Controllers\API\VerController {#190 …}
+        $method: "index"
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Route.php:176 {▼
+      Illuminate\Routing\Route->run() …
+      › if ($this->isControllerAction()) {
+      ›     return $this->runController();
+      › }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Router.php:680 {▼
+      Illuminate\Routing\Router->Illuminate\Routing\{closure} …
+      › return $this->prepareResponse(
+      ›     $request, $route->run()
+      › );
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:30 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › try {
+      ›     return $destination($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php:41 {▼
+      Illuminate\Routing\Middleware\SubstituteBindings->handle($request, Closure $next) …
+      › 
+      ›     return $next($request);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php:58 {▼
+      Illuminate\Routing\Middleware\ThrottleRequests->handle($request, Closure $next, $maxAttempts = 60, $decayMinutes = 1) …
+      › 
+      › $response = $next($request);
+      › 
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:104 {▼
+      Illuminate\Pipeline\Pipeline->then(Closure $destination) …
+      › 
+      ›     return $pipeline($this->passable);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Router.php:682 {▼
+      Illuminate\Routing\Router->runRouteWithinStack(Route $route, Request $request) …
+      ›                         );
+      ›                     });
+      › }
+      arguments: {▼
+        $destination: Closure($request) {#202 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Router.php:657 {▼
+      Illuminate\Routing\Router->runRoute(Request $request, Route $route) …
+      › return $this->prepareResponse($request,
+      ›     $this->runRouteWithinStack($route, $request)
+      › );
+      arguments: {▼
+        $route: Illuminate\Routing\Route {#163 …}
+        $request: Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Router.php:623 {▼
+      Illuminate\Routing\Router->dispatchToRoute(Request $request) …
+      › {
+      ›     return $this->runRoute($request, $this->findRoute($request));
+      › }
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $route: Illuminate\Routing\Route {#163 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Router.php:612 {▼
+      Illuminate\Routing\Router->dispatch(Request $request) …
+      › 
+      ›     return $this->dispatchToRoute($request);
+      › }
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:176 {▼
+      Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure} …
+      › 
+      ›     return $this->router->dispatch($request);
+      › };
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:30 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › try {
+      ›     return $destination($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php:21 {▼
+      Illuminate\Foundation\Http\Middleware\TransformsRequest->handle($request, Closure $next) …
+      › 
+      ›     return $next($request);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php:21 {▼
+      Illuminate\Foundation\Http\Middleware\TransformsRequest->handle($request, Closure $next) …
+      › 
+      ›     return $next($request);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php:27 {▼
+      Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle($request, Closure $next) …
+      › 
+      ›     return $next($request);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php:62 {▼
+      Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle($request, Closure $next) …
+      › 
+      ›     return $next($request);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\fideloper\proxy\src\TrustProxies.php:57 {▼
+      Fideloper\Proxy\TrustProxies->handle(Request $request, Closure $next) …
+      › 
+      ›     return $next($request);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:163 {▼
+      Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure} …
+      › $response = method_exists($pipe, $this->method)
+      ›                 ? $pipe->{$this->method}(...$parameters)
+      ›                 : $pipe(...$parameters);
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+        $next: Closure($passable) {#176 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php:53 {▼
+      Illuminate\Routing\Pipeline->Illuminate\Routing\{closure} …
+      › 
+      ›     return $callable($passable);
+      › } catch (Exception $e) {
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:104 {▼
+      Illuminate\Pipeline\Pipeline->then(Closure $destination) …
+      › 
+      ›     return $pipeline($this->passable);
+      › }
+      arguments: {▼
+        Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:151 {▼
+      Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter($request) …
+      ›                 ->through($this->app->shouldSkipMiddleware() ? [] : $this->middleware)
+      ›                 ->then($this->dispatchToRouter());
+      › }
+      arguments: {▼
+        $destination: Closure($request) {#171 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:116 {▼
+      Illuminate\Foundation\Http\Kernel->handle($request) …
+      › 
+      ›     $response = $this->sendRequestThroughRouter($request);
+      › } catch (Exception $e) {
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\public\index.php:55 {▼
+      require_once …
+      › $response = $kernel->handle(
+      ›     $request = Illuminate\Http\Request::capture()
+      › );
+      arguments: {▼
+        $request: Illuminate\Http\Request {#43 …}
+      }
+    }
+    C:\xampp\htdocs\laravel-project\server.php:21 {▼
+      › 
+      › require_once __DIR__.'/public/index.php';
+      › 
+      arguments: {▼
+        "C:\xampp\htdocs\laravel-project\public\index.php"
+      }
+    }
+  }
+}
